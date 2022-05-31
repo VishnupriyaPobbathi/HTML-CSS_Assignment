@@ -1,0 +1,173 @@
+<html>
+
+<head>
+    <title>Home page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="User_Profile.css">
+    <script>
+        function myFunction() {
+            var table = document.getElementById("myTable");
+            var row = table.insertRow();
+            var cell1 = row.insertCell();
+            var cell2 = row.insertCell();
+            var cell3 = row.insertCell();
+            var cell5 = row.insertCell();
+            var cell6 = row.insertCell();
+            var cell7 = row.insertCell();
+            var cell8 = row.insertCell();
+
+            cell1.innerHTML = document.getElementById("uname").value;
+            cell2.innerHTML = document.getElementById("pass").value;
+            cell3.innerHTML = document.getElementById("male").value;
+            cell5.innerHTML = document.getElementById("date").value;
+            cell6.innerHTML = document.getElementById("phone_no").value;
+            cell7.innerHTML = document.getElementById("email").value;
+            cell8.innerHTML = document.getElementById("html").value;
+
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <p style="text-align: center;">My Quiz</p>
+        <a href="MainPage.html" class="loginbutton">Back</a>
+        <img class="imagelogo" src="photos/logo1.jpg">
+    </header>
+    <section>
+        <nav>
+            <div class="button-div">
+                <a href="HTML_Questions.html"><button class="button">Practice Questions for HTML</button></a>
+                <a href="CSS_Questions.html"><button class="button">Practice Questions for CSS</button></a>
+                <a href="JS_Questions.html"><button class="button">Practice Questions for JS</button></a>
+                <a href="SQL_Questions.html"><button class="button">Practice Questions for SQL</button></a>
+                <a href="Python_Questions.html"><button class="button">Practice Questions for Python</button></a>
+                <a href="PHP_Questions.htmls"><button class="button">Practice Questions for PHP</button></a>
+                <a href="Csharp_Questions.html"><button class="button">Practice Questions for C#</button></a>
+                <a href="Bootstrap_Questions.html"><button class="button">Practice Questions for Bootstrap</button></a>
+            </div>
+        </nav>
+        <article>
+            <ul>
+                <li><a href="MainPage.html">Home</a></li>
+                <li><a href="AboutUs.html">About us</a></li>
+                <li class="dropdown">
+                    <a href="MainPage.html" class="dropbtn">More</a>
+                    <div class="dropdown-content">
+                        <a href="Instructions.html">Instructions</a>
+                        <a href="Results.html">Results</a>
+                    </div>
+                </li>
+            </ul>
+            <div style="border:2px solid black ;width:100%;height:70%;">
+                <label for="file">Insert Image:</label><br><br>
+                <input type="file" id="file" name="selected_file" accept=".jpg,.pdf,.jpeg,.png" required><br><br>
+                <table align="center">
+                    <form onsubmit="myFunction(); return false" required>
+                        <tr>
+                            <td><label for="uname">User Name:</label></td>
+                            <td><input type="textbox" name="uname" id="uname" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="pass">Password:</label></td>
+                            <td><input type="password" name="pass" id="pass" required></td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                                <label>Select Gender:</label>
+                                <td>
+                                    <input type="radio" id="male" name="gender" value="Male">
+                                    <label for="male">Male</label>
+                                    <input type="radio" id="female" name="gender" value="Female">
+                                    <label for="female">Female</label>
+                                </td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="date">DOB:</label>
+                            </td>
+                            <td>
+                                <input type="date" id="date" name="date" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="phone_no">phone number:</label>
+                            </td>
+                            <td><input type="tel" id="phone_no" name="phone_number" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email">E-mail:</label>
+
+                            </td>
+                            <td>
+                                <input type="email" id="email" name="your_mail" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Select language you know: </label>
+                                <td>
+                                    <input type="checkbox" id="html" name="Language" value="HTML">
+                                    <label for="html">HTML</label>
+                                    <input type="checkbox" id="css" name="Language" value="CSS">
+                                    <label for="css">CSS</label>
+                                    <input type="checkbox" id="javascript" name="Language" value="JAVASCRIPT">
+                                    <label for="javascript">JAVASCRIPT</label>
+                                    <input type="checkbox" id="sql" name="Language" value="SQL">
+                                    <label for="sql">SQL</label><br>
+                                    <input type="checkbox" id="python" name="Language" value="PYTHON">
+                                    <label for="python">PYTHON</label>
+                                    <input type="checkbox" id="php" name="Language" value="PHP">
+                                    <label for="php">PHP</label>
+                                    <input type="checkbox" id="csharp" name="Language" value="C#">
+                                    <label for="csharp">C#</label>
+                                    <input type="checkbox" id="bootstrap" name="Language" value="BOOTSTRAP">
+                                    <label for="bootstrap">BOOTSTRAP</label>
+                                </td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <br><br><br>
+                            </td>
+                            <td><input type="submit" value="Submit">
+                                <input type="reset" value="Clear">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+            </div>
+        </article>
+    </section>
+
+    <section>
+        <div>
+            <table style="border:1px;" id="myTable">
+                <tr>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Gender</th>
+                    <th>DOB</th>
+                    <th>phone_number</th>
+                    <th>E-mail</th>
+                    <th>Languages</th>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>
+            <a href="#"><i class="fa fa-home"></i>Home</a>
+            <a href="#">Privacy policy</a><br>
+        </p>
+        <p>&copy; Copyright 2010 - 2022 HTML.am</p>
+    </footer>
+
+</body>
+
+</html>
